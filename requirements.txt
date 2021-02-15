@@ -1,0 +1,23 @@
+pandas
+# Extras
+lxml
+odfpy
+
+# ML
+scikit-learn
+seaborn
+
+# doc
+sphinx
+sphinx_material
+numpy>=1.16
+matplotlib
+numpydoc
+nbsphinx
+jupyter_client
+notebook
+nbconvert
+ipykernel
+recommonmark
+sphinx_markdown_tables
+sphinx-copybutton
