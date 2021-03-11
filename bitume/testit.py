@@ -75,7 +75,8 @@ result['ANNEE_DEM'] = np.where(result['DTDEM'] != '1900-12-31', result['DTDEM'].
 
 result['AGEAD'] = np.where(result['AGEAD'].isnull() & result['DTNAIS'].notnull(), (result['DTADH'].apply(lambda x: int(x.split('-')[0]))) - (result['DTNAIS'].apply(lambda x: 0 if type(x) == float else int(x.split('-')[0]))), result['AGEAD'])
 
-result['AGEAD'] = np.where(result['AGEAD'], result['AGEAD'].apply(lambda x: 0 if x > 500 else x), result['AGEAD'])
+
+result['AGEAD'] = np.where(result['AGEAD'], result['AGEAD'].apply(lambda x: int(result['AGEAD'].median()) if x > 500 else x), result['AGEAD'])
 
 # year(DTADH) - year(DTNAISS)
 
